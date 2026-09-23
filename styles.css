@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #003791;
+    width: 90vw;
+    max-width: 24rem;
+    min-height: 25rem;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.text {
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+.logo {
+    width: 20%;
+    max-width: 2.9rem;
+    height: auto;
+    margin-bottom: 1%;
+}
+.image {
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 0.80;
+}
