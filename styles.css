@@ -1,12 +1,33 @@
+ html, body {
+    /* font-size: clamp (14px, 1vw + 10px, 18px); */
+    height: 100%;
+    overflow: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img-logo/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    text-shadow: 0px 4px 10px rgba(24, 70, 139, 0.885);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 .card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
     background-color: #003791;
-    width: 90vw;
-    max-width: 24rem;
-    min-height: 25rem;
+    width: 100%;
+    min-height: 27rem;
     padding: 1%;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .text {
@@ -14,16 +35,89 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     margin-top: auto;
+    grid-row: 3;
+    padding-top: 1.2rem;
 }
 .logo {
-    width: 20%;
-    max-width: 2.9rem;
+    width: 28%;
+    max-width: 5rem;
     height: auto;
-    margin-bottom: 1%;
+    grid-row: 1;
+    margin-bottom: 1.2rem;
 }
 .image {
-    width: 95%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 1 / 0.80;
+    aspect-ratio: 1 / 0.75;
+    grid-row: 2;
+    margin: 0 auto;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+    max-width: 85rem;
+    width: 95%;
+    height: max-content;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    justify-items: stretch;
+
+}
+.center{
+    grid-column: span 2;
+    width: 100%;
+    justify-self: center;
+    max-width: 30rem;
+    min-height: 29rem;
+}
+ @media (max-width: 1025px) { /* for ipad-tablet*/
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .center {
+    grid-column: span 1;
+    max-width: 26rem;
+    min-height: 26rem;
+    }
+}
+
+@media (max-width: 700px) { /* for mobile phones */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .center {
+    grid-column: span 1;
+    max-width: 24rem;
+    min-height: 25rem;
+    }
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    background-color: #6694de;
+    border-radius: 5px;
+    color: rgb(243, 239, 242);
+}
+.fav-text {
+    background-color: rgba(159, 181, 255, 0.923);
+    font-size: 23px;
+    padding: 1rem;
+    margin-top: 0;
+    align-self: stretch;
+    border-radius: 10px;
+}
+
+.page-footer {
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-top: 2rem;
 }
